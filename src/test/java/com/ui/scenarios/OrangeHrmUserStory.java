@@ -39,6 +39,9 @@ public class OrangeHrmUserStory {
 
 	@AfterClass
 	public void closeBrowser() {
-		driver.quit();
+		if(driver != null) {
+			System.out.println("closing the driver instance...");
+			driver.quit();
+		}
 	}
 }
